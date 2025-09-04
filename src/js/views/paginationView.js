@@ -1,4 +1,4 @@
-import View from './view';
+import View from './View.js';
 import icons from 'url:../../img/icons.svg';
 
 class PaginationView extends View {
@@ -8,7 +8,7 @@ class PaginationView extends View {
     this._parentElement.addEventListener('click', function (e) {
       const btn = e.target.closest('.btn--inline');
 
-      if(!btn) return;
+      if (!btn) return;
 
       const goToPage = +btn.dataset.goto;
 
@@ -43,8 +43,7 @@ class PaginationView extends View {
     );
 
     // Page 1, there are other pages
-    if (currentPage === 1 && numPages > 1) 
-        return nextBtn;
+    if (currentPage === 1 && numPages > 1) return nextBtn;
 
     // Last page
     if (currentPage === numPages && numPages > 1) {

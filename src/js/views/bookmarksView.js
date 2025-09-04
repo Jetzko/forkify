@@ -1,4 +1,4 @@
-import View from './view';
+import View from './View.js';
 import previewView from './previewView';
 import icons from 'url:../../img/icons.svg';
 
@@ -7,9 +7,9 @@ class BookmarksView extends View {
   _errorMessage = 'No bookmarks yet.Find a nice recipe and bookmark it ;)';
   _message = 'Start by searching for a recipe or an ingredient. Have fun!';
 
-    addHandlerRender(handler) {
-        window.addEventListener('load', handler)
-    }
+  addHandlerRender(handler) {
+    window.addEventListener('load', handler);
+  }
 
   _generateMarkup() {
     return this._data
